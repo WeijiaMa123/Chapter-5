@@ -1,19 +1,43 @@
 import turtle
 wn= turtle.Screen()
-sl= turtle.Turtle()
-def ss(sl,height,width):
-    for i in range(2):
-        sl.forward(width)
-        sl.left(90)
-        sl.forward(height)
-        sl.left(90)
-    sl.penup()
-    sl.forward(50)
-    sl.pendown()
-sl.penup()
-sl.backward(200)
-sl.pendown()
+tess = turtle.Turtle()
+tess.color("blue","red")
+def ss(t,height,width):
+    if height >= 0:
+        t.beign_fill()
+        t.left(90)
+        t.forward(height)
+        t.left(90)
+        t.write(''+str(height))
+        t.forward(width)
+        t.left(90)
+        t.forward(height)
+        t.left(90)
+        t.end_fill()
+        t.penup()
+        t.forward(50)
+        t.pendown()
+    else:
+        t.left(90)
+        t.forward(height)
+        t.left(90)
+        t.penup()
+        t.forward(10)
+        t.write(''+str(height))
+        t.backward(10)
+        t.pendown()
+        t.forward(width)
+        t.left(90)
+        t.forward(height)
+        t.left(90)
+        t.penup()
+        t.forward(50)
+        t.pendown()
+tess.penup()
+tess.backward(200)
+tess.pendown()
+
 for i in [27,42,-15,31,-40,2]:
-    ss(sl,i,10)
+    ss(tess,i,10)
     
         
